@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 虚拟环境
+venv/
+.env/
+ENV/
+
+# macOS系统文件
+.DS_Store
+
+# 编辑器/IDE
+.idea/
+.vscode/
+*.swp
+
+# 敏感/本地配置
+*.env
+*.local
+
+# pip缓存
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 剪切板加密文件（如需忽略本地测试文件，可取消注释）
+# clipboard.enc 
