@@ -33,8 +33,13 @@ def main():
     except Exception as e:
         print('解密或解压失败，可能是密码错误或文件损坏')
         return
-    pyperclip.copy(text)
-    print('内容已写入本地剪切板')
+    try:
+        pyperclip.copy(text)
+        print('内容已写入本地剪切板')
+    except pyperclip.PyperclipException:
+        with open('output.txt', 'w', encoding='utf-8') as f:
+            f.write(text)
+        print('无法写入剪切板，内容已输出到output.txt')
 
 if __name__ == '__main__':
     main() 
